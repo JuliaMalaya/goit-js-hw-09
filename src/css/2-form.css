@@ -1,0 +1,56 @@
+.feedback-form {
+    width: 408px;
+    min-height: 296px;
+    padding: 24px;
+}
+
+.input-wrapper {
+    margin-bottom: 8px;
+}
+
+.feedback-form label {
+    display: block;
+}
+
+.input-wrapper input {
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    color: #2E2F42;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+}
+
+.textarea-wrapper textarea {
+    width: 100%;
+    height: 80px;
+    resize: none;
+    padding-left: 10px;
+    color: #2E2F42;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+}
+
+.textarea-wrapper {
+    margin-bottom: 6px;
+}
+
+.feedback-form button {
+    border-radius: 8px;
+    padding: 8px 16px;
+    background-color: #4E75FF;
+
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    border: none;
+    cursor: pointer;
+}
+
+.feedback-form button:hover {
+    background-color: #6C8CFF;
+}
