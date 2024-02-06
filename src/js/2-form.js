@@ -11,16 +11,16 @@ const savedState = JSON.parse(localStorage.getItem(LS_KEY)) || {};
 emailInput.value = savedState.email || '';
 textarea.value = savedState.message || '';
 
-const { email, message } = feedbackForm.elements;
+function handleFormInput(event) {
+     if (event.target === emailInput || event.target === textarea) {
+         savedState.email = emailInput.value;
+         savedState.message = textarea.value;
+         
+         localStorage.setItem(LS_KEY, JSON.stringify(savedState));
+    }
+}
 
-emailInput.addEventListener('input', handleFormInput);
-
-function handleFormInput() {
-    savedState.email = email.value.trim(),
-    savedState.message = message.value.trim(),
-    
-    localStorage.setItem(LS_KEY, JSON.stringify(savedState));
-};
+feedbackForm.addEventListener('input', handleFormInput);
 
 feedbackForm.addEventListener('submit', handleFormSubmit);
 
@@ -31,7 +31,7 @@ function handleFormSubmit(event) {
        return alert('Please fill in all the fields of the form.')
     }
 
-    console.log({email: email.value, message: message.value});
+    console.log({email:emailInput.value, message: textarea.value});
     localStorage.removeItem(LS_KEY);
     event.currentTarget.reset();
 };
